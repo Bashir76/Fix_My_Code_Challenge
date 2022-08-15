@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """ FizzBuzz
+    Change of logic if (i % 3) == 0 and (i % 5) == 0:
 """
 import sys
 
@@ -11,15 +12,15 @@ def fizzbuzz(n):
       multiples of five print "Buzz".
     - For numbers which are multiples of both three and five print "FizzBuzz".
     """
-    if n < 15:
+    if n < 1:
         return
 
     tmp_result = []
     for i in range(1, n + 1):
-        if (i % 14) == 0:
-            tmp_result.append("Fizz")
-        elif (i % 3) == 0 and (i % 5) == 0:
+        if (i % 3) == 0 and (i % 5) == 0:
             tmp_result.append("FizzBuzz")
+        elif (i % 3) == 0:
+            tmp_result.append("Fizz")
         elif (i % 5) == 0:
             tmp_result.append("Buzz")
         else:
